@@ -1,15 +1,27 @@
-# Librerías para el proyecto de Series Temporales con ARIMA
-pandas>=2.3.0
-numpy==1.26.4
-matplotlib>=3.10.0
-statsmodels>=0.14.0
-scikit-learn>=1.7.0
-skforecast>=0.16.0
-arch>=7.2.0
-numba==0.60.0
+# Dependencias principales para Machine Learning y Series Temporales
+# Versiones compatibles verificadas (Enero 2025)
 
-# Librerías adicionales
-tqdm>=4.67.0
-rich>=14.0.0
-joblib>=1.5.0
-scipy>=1.16.0
+# Procesamiento de datos
+numpy==1.26.4
+pandas==2.3.0
+scipy==1.16.0
+
+# Visualización
+matplotlib==3.10.3
+seaborn==0.13.2
+plotly==6.2.0
+
+# Machine Learning
+scikit-learn==1.7.0
+lightgbm==4.6.0
+
+# Series Temporales
+statsmodels==0.14.4
+skforecast==0.16.0
+arch==7.2.0
+
+# Herramientas adicionales
+joblib==1.5.1
+numba==0.60.0
+tqdm==4.67.1
+optuna==4.4.0
