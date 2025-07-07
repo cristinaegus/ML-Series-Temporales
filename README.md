@@ -30,15 +30,17 @@ pip install -r requirements.txt
 
 ## Contenido del Proyecto
 
-### Archivo Principal
+### Archivos Principales
 
 - `Serie_temporal_desde_0_Mod_ARIMA.ipynb`: Notebook principal que contiene:
-  - Construcción de rangos temporales
-  - Creación de series temporales sintéticas con diferentes componentes
-  - Análisis de estacionariedad
-  - Implementación de modelos autorregresivos
-  - Modelos ARIMA completos
-  - Evaluación y predicción
+- `Demanda energía eléctrica.ipynb`: Notebook con análisis real de demanda energética que contiene:
+  - Carga y procesamiento de datos reales de demanda eléctrica
+  - Análisis exploratorio de datos temporales
+  - Variables exógenas (temperatura)
+  - Modelos de forecasting con skforecast
+  - Backtesting y validación de modelos
+  - Optimización de hiperparámetros
+  - Visualizaciones interactivas con Plotly
 
 ### Componentes de Series Temporales Incluidos
 
@@ -63,12 +65,18 @@ pip install -r requirements.txt
 ## Librerías Principales Utilizadas
 
 - **pandas**: Manipulación de datos y rangos temporales
-- **numpy**: Operaciones numéricas y generación de componentes sintéticos
+- **numpy**: Operaciones numéricas y generación de componentes sintéticos (v1.26.4)
 - **matplotlib**: Visualización de gráficos
 - **statsmodels**: Análisis estadístico y modelos ARIMA
 - **scikit-learn**: Modelos de machine learning
-- **skforecast**: Forecasting especializado
+- **skforecast**: Forecasting especializado para series temporales
 - **arch**: Pruebas estadísticas adicionales
+- **plotly**: Visualizaciones interactivas
+- **seaborn**: Visualizaciones estadísticas avanzadas
+- **lightgbm**: Modelos de gradient boosting para forecasting
+- **optuna**: Optimización de hiperparámetros
+- **tqdm**: Barras de progreso para procesos largos
+- **numba**: Compilación JIT para acelerar cálculos
 
 ## Estructura de Archivos
 
@@ -91,10 +99,32 @@ pip install -r requirements.txt
 
 1. Activa el entorno virtual
 2. Abre el notebook en Jupyter Lab o VS Code
-3. Ejecuta las celdas secuencialmente para:
-   - Construir series temporales sintéticas
+3. Asegúrate de que el kernel del notebook esté configurado para usar el entorno virtual (.venv)
+4. **Para el notebook de series sintéticas** (`Serie_temporal_desde_0_Mod_ARIMA.ipynb`):
+   - Ejecuta las celdas secuencialmente para construir series temporales sintéticas
    - Analizar propiedades estadísticas
    - Entrenar modelos de predicción
    - Evaluar resultados
+5. **Para el notebook de demanda energética** (`Demanda energía eléctrica.ipynb`):
+   - Ejecuta las celdas secuencialmente para cargar y procesar datos reales
+   - Realizar análisis exploratorio
+   - Entrenar modelos de forecasting
+   - Ejecutar backtesting y optimización
 
-El notebook está diseñado para ser educativo y mostrar paso a paso la construcción y análisis de series temporales desde los conceptos más básicos hasta modelos avanzados.
+## Estado del Entorno
+
+✅ **Entorno completamente configurado y funcional**
+- Todas las dependencias instaladas y compatibles
+- Kernels de notebooks configurados correctamente
+- Conflictos de versiones resueltos (numpy/numba)
+- Ambos notebooks ejecutándose sin errores
+
+## Notas de Configuración del Kernel
+
+Si experimentas problemas con el kernel en VS Code:
+1. Abre la paleta de comandos (Ctrl+Shift+P)
+2. Busca "Python: Select Interpreter"
+3. Selecciona el intérprete del entorno virtual: `.venv\Scripts\python.exe`
+4. En el notebook, asegúrate de seleccionar el kernel correcto (Python 3.12.x (.venv))
+
+Los notebooks están diseñados para ser educativos y mostrar paso a paso la construcción y análisis de series temporales desde los conceptos más básicos hasta modelos avanzados con datos reales.
